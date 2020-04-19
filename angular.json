@@ -22,11 +22,9 @@
 					}
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular-builders/jest:run",
 					"options": {
-						"main": "projects/ngx-tab-focus/src/test.ts",
-						"tsConfig": "projects/ngx-tab-focus/tsconfig.spec.json",
-						"karmaConfig": "projects/ngx-tab-focus/karma.conf.js"
+						"tsConfig": "projects/ngx-tab-focus/tsconfig.spec.json"
 					}
 				},
 				"lint": {

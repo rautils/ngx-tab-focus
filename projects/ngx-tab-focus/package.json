@@ -34,8 +34,5 @@
 		"@angular/common": "^9.1.1",
 		"@angular/core": "^9.1.1",
 		"tslib": "^1.10.0"
-	},
-	"scripts": {
-		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
 	}
 }

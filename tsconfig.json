@@ -20,7 +20,10 @@
         "dist/ngx-tab-focus/ngx-tab-focus",
         "dist/ngx-tab-focus"
       ]
-    }
+	},
+	"types": [
+		"jest"
+	]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
