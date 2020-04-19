@@ -1,5 +1,7 @@
 # Rautils
 
+![Examples](https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server

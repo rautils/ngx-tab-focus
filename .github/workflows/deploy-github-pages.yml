@@ -18,7 +18,7 @@ jobs:
     - name: Install & Build 🔧
       run: |
         npm install
-        npm run build -- --prod
+        npm run build @rautils/ngx-tab-focus -- --prod
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
