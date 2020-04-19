@@ -3,3 +3,4 @@
  */
 
 export * from './lib/ngx-tab-focus.module';
+export * from './lib/component/ngx-tab-focus.component';
