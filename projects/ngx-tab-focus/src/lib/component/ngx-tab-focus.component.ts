@@ -106,13 +106,11 @@ export class NgxTabFocusComponent implements AfterViewInit, OnChanges, OnDestroy
 	}
 
 	private onFocus(): void {
-		console.log('onFocus');
 		this.focused = true;
 		this.setStyle();
 	}
 
 	private onBlur(): void {
-		console.log('onBlur');
 		this.focused = false;
 		this.removeStyle();
 	}
