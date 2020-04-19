@@ -19,14 +19,11 @@ jobs:
       run: |
          npm install -g @angular/cli
          npm install
-         ng build --prod --base-href="/examples/ngx-tab-focus/"
+         ng build --prod --base-href="/ngx-tab-focus/"
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master
         BRANCH: gh-pages
-        FOLDER: dist/examples/npx-tab-focus
-
-# If you're using actions/checkout@v2 you must set persist-credentials
-# to false in most cases for the deployment to work correctly.
+        FOLDER: dist/ngx-tab-focus-demo
