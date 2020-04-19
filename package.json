@@ -6,6 +6,7 @@
 		"start": "ng serve",
 		"build": "ng build",
 		"test": "ng test",
+		"deploy-demo": "ng deploy @rautils/ngx-tab-focus --base-href='/ngx-tab-focus/'",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"postinstall": "ngcc"
