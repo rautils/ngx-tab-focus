@@ -1,0 +1,41 @@
+{
+	"name": "@rautils/ngx-tab-focus",
+	"version": "0.0.1",
+	"homepage": "https://github.com/rautils/NgxTabFocus",
+	"license": "MIT",
+	"keywords": [
+		"angular",
+		"angular 2",
+		"ngx",
+		"tab",
+		"tabs",
+		"focus",
+		"click",
+		"keyboard",
+		"ngx-tab-focus",
+		"ngx-tabs-focus",
+		"ngx-tab",
+		"ngx-tabs",
+		"ngx-focus"
+	],
+	"author": {
+		"name": "Raúl IP",
+		"url": "https://github.com/RaulPROP"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rautils/NgxTabFocus.git",
+		"directory": "projects/ngx-tab-focus"
+	},
+	"bugs": {
+		"url": "https://github.com/rautils/NgxTabFocus/issues"
+	  },
+	"peerDependencies": {
+		"@angular/common": "^9.1.1",
+		"@angular/core": "^9.1.1",
+		"tslib": "^1.10.0"
+	},
+	"scripts": {
+		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
+	}
+}

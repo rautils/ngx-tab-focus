@@ -1,0 +1,11 @@
+<button
+	[class.style-on-mouse]="styleOnClick"
+	[class.style-on-hover]="styleOnHover"
+	class="tab-focus__wrapper"
+	type="button"
+	#wrapper
+>
+	<div class="tab-focus__content" tabindex="-1" #content>
+		<ng-content></ng-content>
+	</div>
+</button>

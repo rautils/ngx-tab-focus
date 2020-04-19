@@ -1,0 +1,64 @@
+<h1> Only with Keyboard </h1>
+
+<h2> Mouse click doesn't trigger style </h2>
+
+<div class="tabs-list">
+
+	<tab-focus class="chip">
+		<div class="chip-inner">
+			basic
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip custom-focus" styleClassName="custom-style">
+		<div class="chip-inner">
+			custom style
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip custom-focus" [styleOnHover]="true">
+		<div class="chip-inner">
+			show style when hover
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip custom-focus" [styleOnHover]="true" styleClassName="custom-style">
+		<div class="chip-inner">
+			show custom style when hover
+		</div>
+	</tab-focus>
+
+</div>
+
+<h1> Plus mouse click </h1>
+
+<h2> Mouse clicks also triggers the style </h2>
+
+<div class="tabs-list">
+
+	<tab-focus class="chip" [styleOnClick]="true">
+		<div class="chip-inner">
+			basic
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip custom-focus" [styleOnClick]="true" styleClassName="custom-style">
+		<div class="chip-inner">
+			Custom style
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip" [styleOnClick]="true" [styleOnHover]="true">
+		<div class="chip-inner">
+			show style when hover
+		</div>
+	</tab-focus>
+
+	<tab-focus class="chip custom-focus" [styleOnClick]="true" [styleOnHover]="true" styleClassName="custom-style">
+		<div class="chip-inner">
+			show custom style when hover
+		</div>
+	</tab-focus>
+
+</div>
+

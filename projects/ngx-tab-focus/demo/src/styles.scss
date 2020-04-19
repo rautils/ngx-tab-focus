@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+	margin: 0;
+
+	width: 100vw;
+}
+
+
+.custom-style {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+
+		border: 4px dashed green;
+	}
+}
