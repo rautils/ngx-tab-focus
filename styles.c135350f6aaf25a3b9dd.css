@@ -1,1 +1,0 @@
-body,html{margin:0;width:100vw}.custom-style{position:relative}.custom-style:after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:calc(100% + 4px);height:calc(100% + 4px);border:4px dashed green}
