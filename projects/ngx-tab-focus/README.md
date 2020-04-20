@@ -12,7 +12,7 @@
 
 # Demo
 
-[You cann see the demo here](https://rautils.github.io/rautils/ngx-tab-focus/)
+[You cann see the demo here](https://rautils.github.io/rautils/?library=ngx-tab-focus)
 
 # Installation
 
