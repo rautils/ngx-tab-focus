@@ -16,10 +16,12 @@ jobs:
       with:
         node-version: 12
     - name: Install & Build 🔧
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         npm install
         npm run build
-        npm run deploy-demo
+        npm run build:demo
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
