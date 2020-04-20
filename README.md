@@ -1,29 +1,58 @@
-# Rautils
+<h1 align="center">@rautils/ngx-focus-tab</h1>
 
-![Examples](https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)
+<h3 align="center">Library to style focused elements only by keyboard</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+<h4 align="center">
 
-## Development server
+<a href="https://rautils.github.io/ngx-tab-focus/"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+</h4>
 
-## Code scaffolding
+# This is a work in progress
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Demo
 
-## Build
+[You cann see the demo here](https://rautils.github.io/ngx-tab-focus/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Installation
 
-## Running unit tests
+First, install the npm module:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+npm install @rautils/ngx-tab-focus --save
+```
 
-## Running end-to-end tests
+or
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+yarn add @rautils/ngx-tab-focus
+```
 
-## Further help
+# Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Import the module
+
+```ts
+import {NgModule} from '@angular/core';
+import {NgxTabFocusModule} from '@rautils/ngx-tab-focus';
+
+@NgModule({
+    imports: [
+        NgxTabFocusModule
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+## Place the component
+
+```html
+<tab-focus>
+	<p>I can be focused only by keyboard</p>
+</tab-focus>
+```
+
+# API reference
+
+<!-- Work in progress -->

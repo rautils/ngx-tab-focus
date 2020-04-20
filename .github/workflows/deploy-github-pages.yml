@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "projects/ngx-tab-focus/src/**"
+      - "!projects/ngx-tab-focus/src/**/*.spec.ts"
+      - "projects/ngx-tab-focus-demo/src/**"
 
 jobs:
   build:
