@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { NgxTabFocusModule } from 'projects/ngx-tab-focus/src';
 
-import { NgxTabFocusDemoComponent } from './ngx-tab-focus-demo.component';
+import { NgxTabFocusDemoRoutingModule } from './ngx-tab-focus-demo-routing.module';
+
+import { NgxTabFocusDemoComponent } from './pages';
 
 @NgModule({
 	declarations: [NgxTabFocusDemoComponent],
-	imports: [NgxTabFocusModule],
+	imports: [NgxTabFocusDemoRoutingModule, NgxTabFocusModule],
 	exports: [NgxTabFocusDemoComponent],
 })
 export class NgxTabFocusDemoModule {}

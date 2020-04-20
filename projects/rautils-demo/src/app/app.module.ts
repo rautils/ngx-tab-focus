@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './pages';
 
-import { NgxTabFocusDemoModule } from './modules/ngx-tab-focus-demo/ngx-tab-focus-demo.module';
+import { NgxTabFocusDemoModule } from './modules';
 
 @NgModule({
   declarations: [
