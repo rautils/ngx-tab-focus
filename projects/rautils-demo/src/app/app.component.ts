@@ -9,7 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent implements OnInit {
 
 	public libraries: {path: string, name: string}[] = [
-		{name: 'NgxTabFocus', path: 'ngx-tab-focus'}
+		{name: 'NgxTabFocus', path: 'ngx-tab-focus'},
+		{name: 'NgxTabFocus', path: 'ngx-tab-focus1'},
+		{name: 'NgxTabFocus', path: 'ngx-tab-focus2'},
+		{name: 'NgxTabFocus', path: 'ngx-tab-focus3'},
+		{name: 'NgxTabFocus', path: 'ngx-tab-focus4'},
 	];
 
 	constructor(private route: ActivatedRoute, private router: Router) {}

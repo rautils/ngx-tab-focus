@@ -1,14 +1,15 @@
 :host {
-	display: block;
 	width: 100vw;
 	height: 100vh;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
 
 	overflow: hidden;
 }
 
 #nav {
-	display: inline-block;
-
 	width: 240px;
 	height: 100%;
 
@@ -27,15 +28,27 @@
 
 	ul {
 		list-style: none;
+
+		padding: 0 1rem;
+		margin: 0;
 	}
 
 	li {
-		> a {
+		a {
+			display: inline-block;
+			position: relative;
+			line-height: 2rem;
+
 			&.active,
+			&:focus,
 			&:hover {
 				&::before {
 					content: '';
-					display: inline-block;
+					display: block;
+
+					position: absolute;
+					top: 0.5rem;
+					left: -1rem;
 
 					width: 0;
 					height: 0;
@@ -46,12 +59,17 @@
 				}
 			}
 
+			&:focus,
 			&:hover {
 				color: blue;
 
 				&::before {
 					animation: list-hover 2s linear infinite;
 				}
+			}
+
+			> tab-focus {
+				display: inline-block;
 			}
 		}
 	}
@@ -64,8 +82,6 @@
 }
 
 #content {
-	display: inline-block;
-
 	width: calc(100% - 240px);
 	height: 100%;
 
