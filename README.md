@@ -4,6 +4,6 @@
 
 # Libraries
 
-## [ngx-tab-focus](https://github.com/rautils/ngx-tab-focus/tree/master/projects/ngx-tab-focus)
+## [ngx-tab-focus](https://github.com/rautils/rautils/tree/master/projects/ngx-tab-focus)
 
 Simple component that sets a style for focused elements only by keyboard (tab key).

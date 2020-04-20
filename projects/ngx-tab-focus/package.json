@@ -13,6 +13,8 @@
 		"click",
 		"keyboard",
 		"ngx-tab-focus",
+		"rautils",
+		"utility",
 		"ngx-tabs-focus",
 		"ngx-tab",
 		"ngx-tabs",
@@ -24,11 +26,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/rautils/ngx-tab-focus.git",
+		"url": "https://github.com/rautils/rautils.git",
 		"directory": "projects/ngx-tab-focus"
 	},
 	"bugs": {
-		"url": "https://github.com/rautils/ngx-tab-focus/issues"
+		"url": "https://github.com/rautils/rautils/issues"
 	},
 	"peerDependencies": {
 		"@angular/common": "^9.1.1",

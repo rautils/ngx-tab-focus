@@ -4,7 +4,7 @@
 
 <h4 align="center">
 
-<a href="https://rautils.github.io/ngx-tab-focus/"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
+<a href="https://rautils.github.io/rautils/ngx-tab-focus/"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
 
 </h4>
 
@@ -12,7 +12,7 @@
 
 # Demo
 
-[You cann see the demo here](https://rautils.github.io/ngx-tab-focus/)
+[You cann see the demo here](https://rautils.github.io/rautils/ngx-tab-focus/)
 
 # Installation
 
