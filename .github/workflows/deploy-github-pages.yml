@@ -16,8 +16,6 @@ jobs:
       with:
         node-version: 12
     - name: Install & Build 🔧
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         npm install
         npm run build
