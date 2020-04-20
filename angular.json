@@ -39,32 +39,32 @@
 				}
 			}
 		},
-		"@rautils/ngx-tab-focus-demo": {
+		"rautils-demo": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
 					"style": "scss"
 				}
 			},
-			"root": "projects/ngx-tab-focus-demo",
-			"sourceRoot": "projects/ngx-tab-focus-demo/src",
+			"root": "projects/rautils-demo",
+			"sourceRoot": "projects/rautils-demo/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/ngx-tab-focus-demo",
-						"index": "projects/ngx-tab-focus-demo/src/index.html",
-						"main": "projects/ngx-tab-focus-demo/src/main.ts",
-						"polyfills": "projects/ngx-tab-focus-demo/src/polyfills.ts",
-						"tsConfig": "projects/ngx-tab-focus-demo/tsconfig.app.json",
+						"outputPath": "dist/rautils-demo",
+						"index": "projects/rautils-demo/src/index.html",
+						"main": "projects/rautils-demo/src/main.ts",
+						"polyfills": "projects/rautils-demo/src/polyfills.ts",
+						"tsConfig": "projects/rautils-demo/tsconfig.app.json",
 						"aot": true,
 						"assets": [
-							"projects/ngx-tab-focus-demo/src/favicon.ico",
-							"projects/ngx-tab-focus-demo/src/assets"
+							"projects/rautils-demo/src/favicon.ico",
+							"projects/rautils-demo/src/assets"
 						],
 						"styles": [
-							"projects/ngx-tab-focus-demo/src/styles.scss"
+							"projects/rautils-demo/src/styles.scss"
 						],
 						"scripts": []
 					},
@@ -72,8 +72,8 @@
 						"production": {
 							"fileReplacements": [
 								{
-									"replace": "projects/ngx-tab-focus-demo/src/environments/environment.ts",
-									"with": "projects/ngx-tab-focus-demo/src/environments/environment.prod.ts"
+									"replace": "projects/rautils-demo/src/environments/environment.ts",
+									"with": "projects/rautils-demo/src/environments/environment.prod.ts"
 								}
 							],
 							"optimization": true,
@@ -99,45 +99,57 @@
 						}
 					}
 				},
-				"deploy": {
-					"builder": "angular-cli-ghpages:deploy",
-					"options": {}
-				},
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "ngx-tab-focus-demo:build"
+						"browserTarget": "rautils-demo:build"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "ngx-tab-focus-demo:build:production"
+							"browserTarget": "rautils-demo:build:production"
 						}
 					}
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "ngx-tab-focus-demo:build"
+						"browserTarget": "rautils-demo:build"
 					}
+				},
+				"deploy": {
+					"builder": "angular-cli-ghpages:deploy",
+					"options": {}
 				},
 				"lint": {
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {
 						"tsConfig": [
-							"projects/ngx-tab-focus-demo/tsconfig.app.json",
-							"projects/ngx-tab-focus-demo/tsconfig.spec.json",
-							"projects/ngx-tab-focus-demo/e2e/tsconfig.json"
+							"projects/rautils-demo/tsconfig.app.json",
+							"projects/rautils-demo/tsconfig.spec.json",
+							"projects/rautils-demo/e2e/tsconfig.json"
 						],
 						"exclude": [
 							"**/node_modules/**"
 						]
 					}
 				},
+				"e2e": {
+					"builder": "@angular-devkit/build-angular:protractor",
+					"options": {
+						"protractorConfig": "projects/rautils-demo/e2e/protractor.conf.js",
+						"devServerTarget": "rautils-demo:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "rautils-demo:serve:production"
+						}
+					}
+				}
 			}
 		}
 	},
 	"cli": {
 		"analytics": false
 	},
-	"defaultProject": "@rautils/ngx-tab-focus"
+	"defaultProject": "rautils-demo"
 }

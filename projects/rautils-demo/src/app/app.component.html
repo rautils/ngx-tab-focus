@@ -1,0 +1,15 @@
+<div id="nav">
+	<h1>Libraries</h1>
+
+	<ul id="libraries-list">
+		<li *ngFor="let library of libraries">
+			<a [routerLink]="['/', library.path]" routerLinkActive="active">
+				{{library.name}}
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div id="content">
+	<router-outlet></router-outlet>
+</div>

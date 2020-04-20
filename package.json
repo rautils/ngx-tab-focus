@@ -8,7 +8,7 @@
 		"clean": "rimraf ./dist",
 		"build:prod": "ng build --prod",
 		"build:ci": "npm run clean && npm run test && npm run build:prod",
-		"build:demo": "ng build @rautils/ngx-tab-focus-demo --prod --base-href='/ngx-tab-focus/'",
+		"build:demo": "ng build rautils-demo --prod --base-href='/rautils/'",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",

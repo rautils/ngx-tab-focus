@@ -7,7 +7,7 @@ on:
     paths:
       - "projects/ngx-tab-focus/src/**"
       - "!projects/ngx-tab-focus/src/**/*.spec.ts"
-      - "projects/ngx-tab-focus-demo/src/**"
+      - "projects/rautils-demo/src/**"
 
 jobs:
   build:
@@ -22,7 +22,6 @@ jobs:
     - name: Install & Build 🔧
       run: |
         npm install
-        npm run build
         npm run build:demo
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -30,4 +29,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master
         BRANCH: gh-pages
-        FOLDER: dist/ngx-tab-focus-demo
+        FOLDER: dist/rautils-demo
