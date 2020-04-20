@@ -1,58 +1,9 @@
-<h1 align="center">@rautils/ngx-focus-tab</h1>
+<h1 align="center"  style="border-bottom: none;">rautils</h1>
 
-<h3 align="center">Library to style focused elements only by keyboard</h3>
+<h3 align="center">Set of utilities for Angular projects</h3>
 
-<h4 align="center">
+# Libraries
 
-<a href="https://rautils.github.io/ngx-tab-focus/"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
+## [ngx-tab-focus](https://github.com/rautils/ngx-tab-focus/tree/master/projects/ngx-tab-focus)
 
-</h4>
-
-# This is a work in progress
-
-# Demo
-
-[You cann see the demo here](https://rautils.github.io/ngx-tab-focus/)
-
-# Installation
-
-First, install the npm module:
-
-```sh
-npm install @rautils/ngx-tab-focus --save
-```
-
-or
-
-```sh
-yarn add @rautils/ngx-tab-focus
-```
-
-# Usage
-
-## Import the module
-
-```ts
-import {NgModule} from '@angular/core';
-import {NgxTabFocusModule} from '@rautils/ngx-tab-focus';
-
-@NgModule({
-    imports: [
-        NgxTabFocusModule
-    ],
-    bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-## Place the component
-
-```html
-<tab-focus>
-	<p>I can be focused only by keyboard</p>
-</tab-focus>
-```
-
-# API reference
-
-<!-- Work in progress -->
+Simple component that sets a style for focused elements only by keyboard (tab key).

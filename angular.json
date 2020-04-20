@@ -120,23 +120,6 @@
 						"browserTarget": "ngx-tab-focus-demo:build"
 					}
 				},
-				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
-					"options": {
-						"main": "projects/ngx-tab-focus-demo/src/test.ts",
-						"polyfills": "projects/ngx-tab-focus-demo/src/polyfills.ts",
-						"tsConfig": "projects/ngx-tab-focus-demo/tsconfig.spec.json",
-						"karmaConfig": "projects/ngx-tab-focus-demo/karma.conf.js",
-						"assets": [
-							"projects/ngx-tab-focus-demo/src/favicon.ico",
-							"projects/ngx-tab-focus-demo/src/assets"
-						],
-						"styles": [
-							"projects/ngx-tab-focus-demo/src/styles.scss"
-						],
-						"scripts": []
-					}
-				},
 				"lint": {
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {
@@ -150,18 +133,6 @@
 						]
 					}
 				},
-				"e2e": {
-					"builder": "@angular-devkit/build-angular:protractor",
-					"options": {
-						"protractorConfig": "projects/ngx-tab-focus-demo/e2e/protractor.conf.js",
-						"devServerTarget": "ngx-tab-focus-demo:serve"
-					},
-					"configurations": {
-						"production": {
-							"devServerTarget": "ngx-tab-focus-demo:serve:production"
-						}
-					}
-				}
 			}
 		}
 	},

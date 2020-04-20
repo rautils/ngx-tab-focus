@@ -1,24 +1,58 @@
-# NgxTabFocus
+<h1 align="center">@rautils/ngx-focus-tab</h1>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+<h3 align="center">Library to style focused elements only by keyboard</h3>
 
-## Code scaffolding
+<h4 align="center">
 
-Run `ng generate component component-name --project ngx-tab-focus` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-tab-focus`.
-> Note: Don't forget to add `--project ngx-tab-focus` or else it will be added to the default project in your `angular.json` file. 
+<a href="https://rautils.github.io/ngx-tab-focus/"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
 
-## Build
+</h4>
 
-Run `ng build ngx-tab-focus` to build the project. The build artifacts will be stored in the `dist/` directory.
+# This is a work in progress
 
-## Publishing
+# Demo
 
-After building your library with `ng build ngx-tab-focus`, go to the dist folder `cd dist/ngx-tab-focus` and run `npm publish`.
+[You cann see the demo here](https://rautils.github.io/ngx-tab-focus/)
 
-## Running unit tests
+# Installation
 
-Run `ng test ngx-tab-focus` to execute the unit tests via [Karma](https://karma-runner.github.io).
+First, install the npm module:
 
-## Further help
+```sh
+npm install @rautils/ngx-tab-focus --save
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+or
+
+```sh
+yarn add @rautils/ngx-tab-focus
+```
+
+# Usage
+
+## Import the module
+
+```ts
+import {NgModule} from '@angular/core';
+import {NgxTabFocusModule} from '@rautils/ngx-tab-focus';
+
+@NgModule({
+    imports: [
+        NgxTabFocusModule
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+## Place the component
+
+```html
+<tab-focus>
+	<p>I can be focused only by keyboard</p>
+</tab-focus>
+```
+
+# API reference
+
+<!-- Work in progress -->
