@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxTabFocusDemoComponent } from './modules/ngx-tab-focus-demo/ngx-tab-focus-demo.component';
 
 const routes: Routes = [
 	{
 		path: 'ngx-tab-focus',
-		loadChildren: () =>
-			import('./modules/ngx-tab-focus-demo/ngx-tab-focus-demo.module').then(
-				(m) => m.NgxTabFocusDemoModule
-			),
+		component: NgxTabFocusDemoComponent,
 	},
 ];
 
