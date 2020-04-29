@@ -9,6 +9,6 @@ import { NgxTabFocusDemoComponent } from './pages';
 @NgModule({
 	declarations: [NgxTabFocusDemoComponent],
 	imports: [NgxTabFocusDemoRoutingModule, NgxTabFocusModule],
-	exports: [NgxTabFocusDemoComponent],
+	exports: [],
 })
 export class NgxTabFocusDemoModule {}

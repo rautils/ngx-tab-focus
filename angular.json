@@ -3,42 +3,6 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"@rautils/ngx-tab-focus": {
-			"projectType": "library",
-			"root": "projects/ngx-tab-focus",
-			"sourceRoot": "projects/ngx-tab-focus/src",
-			"prefix": "tab-focus",
-			"architect": {
-				"build": {
-					"builder": "@angular-devkit/build-ng-packagr:build",
-					"options": {
-						"tsConfig": "projects/ngx-tab-focus/tsconfig.lib.json",
-						"project": "projects/ngx-tab-focus/ng-package.json"
-					},
-					"configurations": {
-						"production": {
-							"tsConfig": "projects/ngx-tab-focus/tsconfig.lib.prod.json"
-						}
-					}
-				},
-				"test": {
-					"builder": "@angular-builders/jest:run",
-					"options": {
-						"tsConfig": "projects/ngx-tab-focus/tsconfig.spec.json"
-					}
-				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"projects/ngx-tab-focus/tsconfig.lib.json",
-							"projects/ngx-tab-focus/tsconfig.spec.json"
-						],
-						"exclude": ["**/node_modules/**"]
-					}
-				}
-			}
-		},
 		"rautils-demo": {
 			"projectType": "application",
 			"schematics": {
@@ -143,6 +107,80 @@
 						"production": {
 							"devServerTarget": "rautils-demo:serve:production"
 						}
+					}
+				}
+			}
+		},
+		"@rautils/ngx-tab-focus": {
+			"projectType": "library",
+			"root": "projects/ngx-tab-focus",
+			"sourceRoot": "projects/ngx-tab-focus/src",
+			"prefix": "tab-focus",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "projects/ngx-tab-focus/tsconfig.lib.json",
+						"project": "projects/ngx-tab-focus/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"tsConfig": "projects/ngx-tab-focus/tsconfig.lib.prod.json"
+						}
+					}
+				},
+				"test": {
+					"builder": "@angular-builders/jest:run",
+					"options": {
+						"tsConfig": "projects/ngx-tab-focus/tsconfig.spec.json"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/ngx-tab-focus/tsconfig.lib.json",
+							"projects/ngx-tab-focus/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**"]
+					}
+				}
+			}
+		},
+		"@rautils/ngx-image-fallback": {
+			"projectType": "library",
+			"root": "projects/ngx-image-fallback",
+			"sourceRoot": "projects/ngx-image-fallback/src",
+			"prefix": "lib",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "projects/ngx-image-fallback/tsconfig.lib.json",
+						"project": "projects/ngx-image-fallback/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"tsConfig": "projects/ngx-image-fallback/tsconfig.lib.prod.json"
+						}
+					}
+				},
+				"test": {
+					"builder": "@angular-builders/jest:run",
+					"options": {
+						"tsConfig": "projects/ngx-image-fallback/tsconfig.spec.json"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/ngx-image-fallback/tsconfig.lib.json",
+							"projects/ngx-image-fallback/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**"
+						]
 					}
 				}
 			}

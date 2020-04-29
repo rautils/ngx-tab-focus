@@ -1,0 +1,65 @@
+<h2>Basic</h2>
+
+<ul class="image-list">
+	<li>
+		<image-fallback class="image-container" [imageSrc]="basicImage">
+			You should never see this
+		</image-fallback>
+	</li>
+
+	<li>
+		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
+			:(
+		</image-fallback>
+	</li>
+
+	<li>
+		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
+			<image-fallback class="image-container" [imageSrc]="'huahuahua'">
+				<image-fallback class="image-container" [imageSrc]="'heuheuehu'">
+					<image-fallback class="image-container" [imageSrc]="'houhouhou'">
+						Quadra-fail
+					</image-fallback>
+				</image-fallback>
+			</image-fallback>
+		</image-fallback>
+	</li>
+</ul>
+
+<h2>Custom Styles</h2>
+
+<ul class="image-list">
+	<li>
+		<image-fallback
+			class="image-container"
+			[imageSrc]="basicImage"
+			classWhileLoading="custom-fallback-loading"
+			classOnError="custom-fallback-failed"
+			classOnSuccess="custom-fallback-success"
+		></image-fallback>
+	</li>
+
+	<li>
+		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
+			:(
+		</image-fallback>
+	</li>
+</ul>
+
+<h2>Listens to new images</h2>
+
+<button (click)="randomizeImage()">Randomize</button>
+
+<ul class="image-list">
+	<li>
+		<image-fallback class="image-container" [imageSrc]="randomImage">
+			This one failed, try to randomize again
+		</image-fallback>
+	</li>
+
+	<li>
+		<image-fallback class="image-container" [imageSrc]="changinImage">
+			This changes every second
+		</image-fallback>
+	</li>
+</ul>
