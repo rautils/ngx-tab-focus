@@ -11,7 +11,7 @@ import {
 	OnChanges,
 	SimpleChanges,
 } from '@angular/core';
-import { ImageAttributeAbstract } from './image-attributes.abstract.component';
+import { ImageAttributeAbstractComponent } from './image-attributes.abstract.component';
 
 @Component({
 	selector: 'image-fallback',
@@ -20,7 +20,7 @@ import { ImageAttributeAbstract } from './image-attributes.abstract.component';
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgxImageFallbackComponent extends ImageAttributeAbstract implements OnInit, OnChanges {
+export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent implements OnInit, OnChanges {
 	@Input()
 	private classWhileLoading = 'image-fallback-loading';
 

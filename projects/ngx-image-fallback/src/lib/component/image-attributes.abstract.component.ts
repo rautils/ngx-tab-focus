@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({template: ''})
-export class ImageAttributeAbstract {
+export class ImageAttributeAbstractComponent {
 	/**
 	 * __`optional`__
 	 *
@@ -113,8 +113,8 @@ export class ImageAttributeAbstract {
 	 * `eager` (Default): Loads the image immediately, regardless of whether or not the image is currently within the visible viewport.
 	 *
 	 * `lazy`: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser.
-	 * The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed.
-	 * This generally improves the performance of the content in most typical use cases.
+	 * The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain
+	 * that it will be needed. This generally improves the performance of the content in most typical use cases.
 	 */
 	@Input()
 	public loading: 'eager' | 'lazy' = 'eager';
