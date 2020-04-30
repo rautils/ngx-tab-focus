@@ -1,11 +1,9 @@
-
 html,
 body {
 	margin: 0;
 
 	width: 100vw;
 }
-
 
 .custom-tab-focus-style {
 	position: relative;
@@ -21,5 +19,17 @@ body {
 		height: calc(100% + 4px);
 
 		border: 4px dashed green;
+	}
+}
+
+.image-container {
+	max-width: 100%;
+	max-height: 100%;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+
+		object-fit: scale-down;
 	}
 }

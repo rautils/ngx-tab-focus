@@ -9,6 +9,13 @@ const routes: Routes = [
 				(m) => m.NgxTabFocusDemoModule
 			),
 	},
+	{
+		path: 'ngx-image-fallback',
+		loadChildren: () =>
+			import('./modules/ngx-image-fallback-demo/ngx-image-fallback-demo.module').then(
+				(m) => m.NgxImageFallbackDemoModule
+			),
+	},
 ];
 
 @NgModule({

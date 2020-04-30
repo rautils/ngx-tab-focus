@@ -7,15 +7,9 @@ import { AppComponent } from './pages';
 import { NgxTabFocusDemoModule } from './modules';
 
 @NgModule({
-  declarations: [
-	AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-	AppRoutingModule,
-	NgxTabFocusDemoModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [BrowserModule, AppRoutingModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

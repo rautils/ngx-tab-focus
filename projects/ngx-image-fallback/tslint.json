@@ -1,0 +1,17 @@
+{
+	"extends": "../../tslint.json",
+	"rules": {
+	  "directive-selector": [
+		true,
+		"attribute",
+		"image-fallback",
+		"camelCase"
+	  ],
+	  "component-selector": [
+		true,
+		"element",
+		"image-fallback",
+		"kebab-case"
+	  ]
+	}
+  }

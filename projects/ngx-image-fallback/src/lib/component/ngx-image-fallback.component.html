@@ -1,0 +1,27 @@
+<ng-container *ngIf="showImage; else fallback">
+	<img
+		[class.image-fallback-hide-img]="hideLastImage"
+
+		[alt]="alt"
+		[attr.crossorigin]="crossorigin"
+		[attr.decoding]="decoding"
+		[attr.height]="height"
+		[attr.importance]="importance"
+		[attr.intrinsicsize]="intrinsicsize"
+		[attr.ismap]="ismap"
+		[attr.loading]="loading"
+		[attr.referrerpolicy]="referrerpolicy"
+		[sizes]="sizes"
+		[src]="src"
+		[srcset]="srcset"
+		[attr.width]="width"
+		[attr.usemap]="usemap"
+
+		(load)="onLoad($event)"
+		(error)="onError($event)"
+	/>
+</ng-container>
+
+<ng-template #fallback>
+	<ng-content></ng-content>
+</ng-template>
