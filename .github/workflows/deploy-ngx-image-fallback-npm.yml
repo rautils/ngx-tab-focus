@@ -5,9 +5,6 @@ name: NPM ngx-image-fallback
 
 on:
   release:
-    types: [published]
-    branches:
-      - master
     paths:
       - "projects/ngx-image-fallback/src/**"
       - "!projects/ngx-image-fallback/src/**/*.spec.ts"

@@ -5,9 +5,6 @@ name: NPM ngx-tab-focus
 
 on:
   release:
-    types: [published]
-    branches:
-      - master
     paths:
       - "projects/ngx-tab-focus/src/**"
       - "!projects/ngx-tab-focus/src/**/*.spec.ts"
