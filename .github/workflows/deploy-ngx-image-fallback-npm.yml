@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: cd projects/ngx-image-fallback && npm ci
+      - run: npm run ng build @rautils/ngx-image-fallback --prod
 
   publish-npm:
     needs: build
