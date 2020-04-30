@@ -4,28 +4,48 @@
 name: NPM ngx-tab-focus
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
+    paths:
+      - "projects/ngx-tab-focus/src/**"
+      - "!projects/*/src/**/*.spec.ts"
+
+# TODO: Add tests
 
 jobs:
-  publish:
+  publish-npm:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Install & Build 🔧
-        run: npm install && npm run ng build @rautils/ngx-tab-focus --prod
-      - name: update NPM package
-        with:
           registry-url: https://registry.npmjs.org/
-        run: cd dist/ngx-tab-focus && npm publish && cd ../..
+      - name: Install
+        run: npm Install
+      - name: build
+        run: npm run ng build @rautils/ngx-image-fallback --prod
+      - name: Publish
+        run: cd dist/ngx-tab-focus && npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: update Githb Package
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
+          node-version: 12
           registry-url: https://npm.pkg.github.com/
-        run: npm install && npm run ng build @rautils/ngx-tab-focus --prod && cd dist/ngx-tab-focus && npm publish
+      - name: Install
+        run: npm Install
+      - name: build
+        run: npm run ng build @rautils/ngx-image-fallback --prod
+      - name: Publish
+        run: cd dist/ngx-tab-focus && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
