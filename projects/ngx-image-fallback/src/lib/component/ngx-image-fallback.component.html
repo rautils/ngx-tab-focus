@@ -1,5 +1,4 @@
 <ng-container *ngIf="showImage; else fallback">
-
 	<img
 		[class.image-fallback-hide-img]="hideLastImage"
 
@@ -21,7 +20,6 @@
 		(load)="onLoad($event)"
 		(error)="onError($event)"
 	/>
-
 </ng-container>
 
 <ng-template #fallback>
