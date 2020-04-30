@@ -35,6 +35,9 @@ MIT
 @angular/router
 MIT
 
+@rautils/ngx-image-fallback
+MIT
+
 @rautils/ngx-tab-focus
 
 core-js
