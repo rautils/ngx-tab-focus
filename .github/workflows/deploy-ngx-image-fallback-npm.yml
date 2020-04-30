@@ -11,11 +11,10 @@ on:
       - "projects/ngx-image-fallback/src/**"
       - "!projects/*/src/**/*.spec.ts"
 
-# TODO: Add tests
+# TODO: Add tests (needs: test)
 
 jobs:
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +32,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
