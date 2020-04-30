@@ -5,9 +5,7 @@ name: NPM ngx-tab-focus
 
 on:
   release:
-    paths:
-      - "projects/ngx-tab-focus/src/**"
-      - "!projects/ngx-tab-focus/src/**/*.spec.ts"
+    types: [published]
 
 jobs:
   build:
@@ -17,7 +15,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm run ng build @rautils/ngx-tab-focus --prod
+      - name: Install & Build 🔧
+      - run: npm install && npm run ng build @rautils/ngx-image-fallback --prod
 
   publish-npm:
     needs: build
