@@ -25,7 +25,7 @@ jobs:
       - name: Install
         run: npm install
       - name: build
-        run: npm run ng build @rautils/ngx-image-fallback --prod
+        run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
         run: cd dist/ngx-image-fallback && npm publish
         env:
@@ -42,7 +42,7 @@ jobs:
       - name: Install
         run: npm install
       - name: build
-        run: npm run ng build @rautils/ngx-image-fallback --prod
+        run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
         run: cd dist/ngx-image-fallback && npm publish
         env:
