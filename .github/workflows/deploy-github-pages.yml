@@ -1,12 +1,12 @@
-name: Demo ngx-tab-focus
+name: Update rautils page
 
 on:
   push:
     branches:
       - master
     paths:
-      - "projects/ngx-tab-focus/src/**"
-      - "!projects/ngx-tab-focus/src/**/*.spec.ts"
+      - "projects/*/src/**"
+      - "!projects/*/src/**/*.spec.ts"
       - "projects/rautils-demo/src/**"
 
 jobs:
