@@ -2,22 +2,22 @@
 
 <ul class="image-list">
 	<li>
-		<image-fallback class="image-container" [imageSrc]="basicImage">
+		<image-fallback class="image-container" [src]="basicImage" >
 			You should never see this
 		</image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
+		<image-fallback class="image-container" [src]="'hueuheuheue'">
 			:(
 		</image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
-			<image-fallback class="image-container" [imageSrc]="'huahuahua'">
-				<image-fallback class="image-container" [imageSrc]="'heuheuehu'">
-					<image-fallback class="image-container" [imageSrc]="'houhouhou'">
+		<image-fallback class="image-container" [src]="'hueuheuheue'">
+			<image-fallback class="image-container" [src]="'huahuahua'">
+				<image-fallback class="image-container" [src]="'heuheuehu'">
+					<image-fallback class="image-container" [src]="'houhouhou'">
 						Quadra-fail
 					</image-fallback>
 				</image-fallback>
@@ -32,7 +32,7 @@
 	<li>
 		<image-fallback
 			class="image-container"
-			[imageSrc]="basicImage"
+			[src]="basicImage"
 			classWhileLoading="custom-fallback-loading"
 			classOnError="custom-fallback-failed"
 			classOnSuccess="custom-fallback-success"
@@ -40,9 +40,13 @@
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [imageSrc]="'hueuheuheue'">
+		<image-fallback class="image-container" [src]="'hueuheuheue'">
 			:(
 		</image-fallback>
+	</li>
+
+	<li>
+		<image-fallback class="image-container custom-fallback-loading" [src]="'hueuheuheue'"></image-fallback>
 	</li>
 </ul>
 
@@ -52,14 +56,26 @@
 
 <ul class="image-list">
 	<li>
-		<image-fallback class="image-container" [imageSrc]="randomImage">
-			This one failed, try to randomize again
+		<image-fallback
+			class="image-container"
+			[src]="randomImage"
+			classWhileLoading="custom-fallback-loading"
+			classOnError="custom-fallback-failed"
+			classOnSuccess="custom-fallback-success"
+		>
+		<button (click)="randomizeImage()">click to try a new one</button>
 		</image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [imageSrc]="changinImage">
-			This changes every second
+		<image-fallback
+			class="image-container"
+			[src]="changinImage"
+			classWhileLoading="custom-fallback-loading"
+			classOnError="custom-fallback-failed"
+			classOnSuccess="custom-fallback-success"
+		>
+			This changes every two seconds
 		</image-fallback>
 	</li>
 </ul>

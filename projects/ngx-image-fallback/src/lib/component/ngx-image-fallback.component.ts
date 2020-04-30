@@ -11,6 +11,7 @@ import {
 	OnChanges,
 	SimpleChanges,
 } from '@angular/core';
+import { ImageAttributeAbstract } from './image-attributes.abstract.component';
 
 @Component({
 	selector: 'image-fallback',
@@ -19,7 +20,7 @@ import {
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgxImageFallbackComponent implements OnInit, OnChanges {
+export class NgxImageFallbackComponent extends ImageAttributeAbstract implements OnInit, OnChanges {
 	@Input()
 	private classWhileLoading = 'image-fallback-loading';
 
@@ -29,18 +30,6 @@ export class NgxImageFallbackComponent implements OnInit, OnChanges {
 	@Input()
 	private classOnSuccess = 'image-fallback-success';
 
-	@Input()
-	private imageSrc = '';
-
-	@Input()
-	private imageAlt = '';
-
-	@Input()
-	private imageSizes = '';
-
-	@Input()
-	private imageSrcset = '';
-
 	@Output()
 	private imageLoad: EventEmitter<Event> = new EventEmitter<Event>();
 
@@ -49,15 +38,18 @@ export class NgxImageFallbackComponent implements OnInit, OnChanges {
 
 	public imageLoading = true;
 	private imageFailed = false;
+	private lastImageSuccess = false;
 
-	constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+		super();
+	}
 
 	ngOnInit(): void {
 		this.paint();
 	}
 
 	ngOnChanges(changes: SimpleChanges): void {
-		if (changes.hasOwnProperty('imageSrc')) {
+		if (changes.hasOwnProperty('src')) {
 			this.imageLoading = true;
 			this.imageFailed = false;
 
@@ -70,6 +62,7 @@ export class NgxImageFallbackComponent implements OnInit, OnChanges {
 
 		this.imageLoading = false;
 		this.imageFailed = false;
+		this.lastImageSuccess = true;
 
 		this.paint();
 	}
@@ -78,24 +71,13 @@ export class NgxImageFallbackComponent implements OnInit, OnChanges {
 		this.imageError.emit(event);
 		this.imageLoading = false;
 		this.imageFailed = true;
+		this.lastImageSuccess = false;
 
 		this.paint();
 	}
 
-	public get src(): string {
-		return this.imageSrc;
-	}
-
-	public get alt(): string {
-		return this.imageAlt;
-	}
-
-	public get sizes(): string {
-		return this.imageSizes;
-	}
-
-	public get srcset(): string {
-		return this.imageSrcset;
+	public get hideLastImage(): boolean {
+		return this.imageLoading && !this.lastImageSuccess;
 	}
 
 	public get showImage(): boolean {

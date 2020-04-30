@@ -18,12 +18,12 @@ export class NgxImageFallbackDemoComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		this.changingImageInterval = setInterval(() => {
 			if (Math.random() > 0.3) {
-				const randomInt = Math.round(Math.random() * 10);
-				this.changinImage = `https://picsum.photos/200?random=${10 + randomInt}`;
+				const randomInt = Math.round(Math.random() * 100);
+				this.changinImage = `https://picsum.photos/200?random=${100 + randomInt}`;
 			} else {
-				this.changinImage = `wrong_url`;
+				this.randomImage = `wrong_url`;
 			}
-		}, 1000);
+		}, 2000);
 	}
 
 	ngOnDestroy(): void {
@@ -32,7 +32,7 @@ export class NgxImageFallbackDemoComponent implements OnInit, OnDestroy {
 
 	public randomizeImage(): void {
 		if (Math.random() > 0.3) {
-			const randomInt = Math.round(Math.random() * 10);
+			const randomInt = Math.round(Math.random() * 100);
 			this.randomImage = `https://picsum.photos/200?random=${randomInt}`;
 		} else {
 			this.randomImage = `woopsies`;

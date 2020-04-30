@@ -36,7 +36,8 @@ ul {
 		justify-content: center;
 
 		> .image-container {
-			&.image-fallback-loading {
+			&.image-fallback-loading,
+			&.custom-fallback-loading {
 				width: 100%;
 				height: 100%;
 			}
@@ -48,5 +49,18 @@ ul {
 			align-items: center;
 			justify-content: center;
 		}
+	}
+}
+
+.image-container {
+	&.custom-fallback-loading {
+		box-shadow: 0 0 10px blue;
+	}
+
+	&.custom-fallback-failed {
+		box-shadow: 0 0 10px red;
+	}
+	&.custom-fallback-success {
+		box-shadow: 0 0 10px green;
 	}
 }

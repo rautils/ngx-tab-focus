@@ -1,24 +1,56 @@
-# NgxImageFallback
+<h1 align="center">@rautils/ngx-image-fallback</h1>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+<h3 align="center">Library to give a fallback element to an image</h3>
 
-## Code scaffolding
+<h4 align="center">
 
-Run `ng generate component component-name --project ngx-image-fallback` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-image-fallback`.
-> Note: Don't forget to add `--project ngx-image-fallback` or else it will be added to the default project in your `angular.json` file. 
+<a href="https://rautils.github.io/rautils/?library=ngx-image-fallback"><img alt="Github Pages" src="https://github.com/rautils/ngx-image-fallback/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
 
-## Build
+</h4>
 
-Run `ng build ngx-image-fallback` to build the project. The build artifacts will be stored in the `dist/` directory.
+# This is a work in progress
 
-## Publishing
+# Demo
 
-After building your library with `ng build ngx-image-fallback`, go to the dist folder `cd dist/ngx-image-fallback` and run `npm publish`.
+[You cann see the demo here](https://rautils.github.io/rautils/?library=ngx-image-fallback)
 
-## Running unit tests
+# Installation
 
-Run `ng test ngx-image-fallback` to execute the unit tests via [Karma](https://karma-runner.github.io).
+First, install the npm module:
 
-## Further help
+```sh
+npm install @rautils/ngx-image-fallback --save
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+or
+
+```sh
+yarn add @rautils/ngx-image-fallback
+```
+
+# Usage
+
+## Import the module
+
+```ts
+import { NgModule } from '@angular/core';
+import { NgxImageFallbackModule } from '@rautils/ngx-image-fallback';
+
+@NgModule({
+	imports: [NgxImageFallbackModule],
+	bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+## Place the component
+
+```html
+<image-fallback [imageSrc]="<source of the image>" [imageAlt]="<alternative text>">
+    Anything inside this component will be rendered if the image fails
+</image-fallback>
+```
+
+# API reference
+
+<!-- Work in progress -->
