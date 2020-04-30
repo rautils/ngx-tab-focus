@@ -2,12 +2,6 @@
 
 <h3 align="center">Library to style focused elements only by keyboard</h3>
 
-<h4 align="center">
-
-<a href="https://rautils.github.io/rautils/?library=ngx-tab-focus"><img alt="Github Pages" src="https://github.com/rautils/ngx-tab-focus/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master"></a>
-
-</h4>
-
 # This is a work in progress
 
 # Demo

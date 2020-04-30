@@ -15,7 +15,7 @@ import { Observable, fromEvent, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-	selector: 'tab-focus',
+	selector: 'ngx-tab-focus',
 	templateUrl: './ngx-tab-focus.component.html',
 	styleUrls: ['./ngx-tab-focus.component.scss'],
 	encapsulation: ViewEncapsulation.None,

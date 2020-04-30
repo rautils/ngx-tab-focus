@@ -4,13 +4,13 @@
 	  "directive-selector": [
 		true,
 		"attribute",
-		"image-fallback",
+		"ngx-image-fallback",
 		"camelCase"
 	  ],
 	  "component-selector": [
 		true,
 		"element",
-		"image-fallback",
+		"ngx-image-fallback",
 		"kebab-case"
 	  ]
 	}

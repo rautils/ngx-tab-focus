@@ -2,27 +2,27 @@
 
 <ul class="image-list">
 	<li>
-		<image-fallback class="image-container" [src]="basicImage" >
+		<ngx-image-fallback class="image-container" [src]="basicImage" >
 			You should never see this
-		</image-fallback>
+		</ngx-image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [src]="'hueuheuheue'">
+		<ngx-image-fallback class="image-container" [src]="'hueuheuheue'">
 			:(
-		</image-fallback>
+		</ngx-image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [src]="'hueuheuheue'">
-			<image-fallback class="image-container" [src]="'huahuahua'">
-				<image-fallback class="image-container" [src]="'heuheuehu'">
-					<image-fallback class="image-container" [src]="'houhouhou'">
+		<ngx-image-fallback class="image-container" [src]="'hueuheuheue'">
+			<ngx-image-fallback class="image-container" [src]="'huahuahua'">
+				<ngx-image-fallback class="image-container" [src]="'heuheuehu'">
+					<ngx-image-fallback class="image-container" [src]="'houhouhou'">
 						Quadra-fail
-					</image-fallback>
-				</image-fallback>
-			</image-fallback>
-		</image-fallback>
+					</ngx-image-fallback>
+				</ngx-image-fallback>
+			</ngx-image-fallback>
+		</ngx-image-fallback>
 	</li>
 </ul>
 
@@ -30,23 +30,23 @@
 
 <ul class="image-list">
 	<li>
-		<image-fallback
+		<ngx-image-fallback
 			class="image-container"
 			[src]="basicImage"
 			classWhileLoading="custom-fallback-loading"
 			classOnError="custom-fallback-failed"
 			classOnSuccess="custom-fallback-success"
-		></image-fallback>
+		></ngx-image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container" [src]="'hueuheuheue'">
+		<ngx-image-fallback class="image-container" [src]="'hueuheuheue'">
 			:(
-		</image-fallback>
+		</ngx-image-fallback>
 	</li>
 
 	<li>
-		<image-fallback class="image-container custom-fallback-loading" [src]="'hueuheuheue'"></image-fallback>
+		<ngx-image-fallback class="image-container custom-fallback-loading" [src]="'hueuheuheue'"></ngx-image-fallback>
 	</li>
 </ul>
 
@@ -56,7 +56,7 @@
 
 <ul class="image-list">
 	<li>
-		<image-fallback
+		<ngx-image-fallback
 			class="image-container"
 			[src]="randomImage"
 			classWhileLoading="custom-fallback-loading"
@@ -64,11 +64,11 @@
 			classOnSuccess="custom-fallback-success"
 		>
 		<button (click)="randomizeImage()">click to try a new one</button>
-		</image-fallback>
+		</ngx-image-fallback>
 	</li>
 
 	<li>
-		<image-fallback
+		<ngx-image-fallback
 			class="image-container"
 			[src]="changinImage"
 			classWhileLoading="custom-fallback-loading"
@@ -76,6 +76,6 @@
 			classOnSuccess="custom-fallback-success"
 		>
 			This changes every two seconds
-		</image-fallback>
+		</ngx-image-fallback>
 	</li>
 </ul>

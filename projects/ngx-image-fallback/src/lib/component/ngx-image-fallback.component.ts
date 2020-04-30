@@ -14,7 +14,7 @@ import {
 import { ImageAttributeAbstractComponent } from './image-attributes.abstract.component';
 
 @Component({
-	selector: 'image-fallback',
+	selector: 'ngx-image-fallback',
 	templateUrl: './ngx-image-fallback.component.html',
 	styleUrls: ['./ngx-image-fallback.component.scss'],
 	encapsulation: ViewEncapsulation.None,

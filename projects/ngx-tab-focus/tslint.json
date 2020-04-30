@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "tab-focus",
+      "ngx-tab-focus",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "tab-focus",
+      "ngx-tab-focus",
       "kebab-case"
     ]
   }
