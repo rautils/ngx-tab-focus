@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: NPM ngx-tab-focus
+name: NPM ngx-image-fallback
 
 on:
   release:
@@ -9,8 +9,8 @@ on:
     branches:
       - master
     paths:
-      - "projects/ngx-tab-focus/src/**"
-      - "!projects/ngx-tab-focus/src/**/*.spec.ts"
+      - "projects/ngx-image-fallback/src/**"
+      - "!projects/ngx-image-fallback/src/**/*.spec.ts"
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm run ng build @rautils/ngx-tab-focus --prod
+      - run: npm run ng build @rautils/ngx-image-fallback --prod
 
   publish-npm:
     needs: build
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: cd dist/ngx-tab-focus && npm publish
+      - run: cd dist/ngx-image-fallback && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -44,6 +44,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: cd dist/ngx-tab-focus && npm publish
+      - run: cd dist/ngx-image-fallback && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

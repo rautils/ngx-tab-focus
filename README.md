@@ -5,5 +5,6 @@
 # Libraries
 
 ## [ngx-tab-focus](https://github.com/rautils/rautils/tree/master/projects/ngx-tab-focus)
+## [ngx-image-fallback](https://github.com/rautils/rautils/tree/master/projects/ngx-image-fallback)
 
 Simple component that sets a style for focused elements only by keyboard (tab key).

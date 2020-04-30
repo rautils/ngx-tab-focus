@@ -1,0 +1,9 @@
+image-fallback {
+	display: block;
+}
+
+img {
+	&.image-fallback-hide-img {
+		opacity: 0;
+	}
+}

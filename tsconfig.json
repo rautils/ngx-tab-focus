@@ -19,11 +19,15 @@
       "ngx-tab-focus": [
         "dist/ngx-tab-focus/ngx-tab-focus",
         "dist/ngx-tab-focus"
+      ],
+      "ngx-image-fallback": [
+        "dist/ngx-image-fallback/ngx-image-fallback",
+        "dist/ngx-image-fallback"
       ]
-	},
-	"types": [
-		"jest"
-	]
+    },
+    "types": [
+      "jest"
+    ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
