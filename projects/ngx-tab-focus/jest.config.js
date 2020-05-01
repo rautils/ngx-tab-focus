@@ -4,12 +4,12 @@ module.exports = {
 	...preset,
 	preset: 'jest-preset-angular',
 	setupFilesAfterEnv: ['<rootDir>/node_modules/jest-preset-angular/build/setupJest.js'],
-	testMatch: ['<rootDir>/projects/ngx-image-fallback/src/**/*.spec.ts'],
+	testMatch: ['<rootDir>/projects/ngx-tab-focus/src/**/*.spec.ts'],
 	globals: {
 		...preset.globals,
 		'ts-jest': {
 			...preset.globals['ts-jest'],
-			tsConfig: '<rootDir>/projects/ngx-image-fallback/tsconfig.spec.json',
+			tsConfig: '<rootDir>/projects/ngx-tab-focus/tsconfig.spec.json',
 			isolatedModules: true,
 		},
 	},

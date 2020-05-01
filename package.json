@@ -14,6 +14,7 @@
 		"build:demo": "ng build rautils-demo --prod --base-href='/rautils/'",
 		"test": "ng test",
 		"test:coverage": "ng test --coverage",
+		"test:watch": "ng test --watch",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"postinstall": "ngcc"

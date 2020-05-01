@@ -1,64 +1,14 @@
-<h2> Only with Keyboard </h2>
+<h2>Directive</h2>
 
-<h3> Mouse click doesn't trigger style </h3>
+<ul>
 
-<div class="tabs-list">
+	<li>
 
-	<ngx-tab-focus class="chip">
-		<div class="chip-inner">
-			basic
-		</div>
-	</ngx-tab-focus>
+		<button>regular button</button>
+	</li>
 
-	<ngx-tab-focus class="chip custom-focus" [styleClassName]="customClassName">
-		<div class="chip-inner">
-			custom style
-		</div>
-	</ngx-tab-focus>
+	<li>
+		<button ngxTabFocus>custom button</button>
+	</li>
 
-	<ngx-tab-focus class="chip custom-focus" [styleOnHover]="true">
-		<div class="chip-inner">
-			show style when hover
-		</div>
-	</ngx-tab-focus>
-
-	<ngx-tab-focus class="chip custom-focus" [styleOnHover]="true" [styleClassName]="customClassName">
-		<div class="chip-inner">
-			show custom style when hover
-		</div>
-	</ngx-tab-focus>
-
-</div>
-
-<h2> Plus mouse click </h2>
-
-<h3> Mouse clicks also triggers the style </h3>
-
-<div class="tabs-list">
-
-	<ngx-tab-focus class="chip" [styleOnClick]="true">
-		<div class="chip-inner">
-			basic
-		</div>
-	</ngx-tab-focus>
-
-	<ngx-tab-focus class="chip custom-focus" [styleOnClick]="true" [styleClassName]="customClassName">
-		<div class="chip-inner">
-			Custom style
-		</div>
-	</ngx-tab-focus>
-
-	<ngx-tab-focus class="chip" [styleOnClick]="true" [styleOnHover]="true">
-		<div class="chip-inner">
-			show style when hover
-		</div>
-	</ngx-tab-focus>
-
-	<ngx-tab-focus class="chip custom-focus" [styleOnClick]="true" [styleOnHover]="true" [styleClassName]="customClassName">
-		<div class="chip-inner">
-			show custom style when hover
-		</div>
-	</ngx-tab-focus>
-
-</div>
-
+</ul>

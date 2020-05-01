@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NgxTabFocusComponent } from './component';
+import { NgxTabFocusDirective } from './directive';
 
 
 
 @NgModule({
-  declarations: [NgxTabFocusComponent],
+  declarations: [NgxTabFocusDirective],
   imports: [],
-  exports: [NgxTabFocusComponent]
+  exports: [NgxTabFocusDirective]
 })
 export class NgxTabFocusModule { }
