@@ -1,5 +1,5 @@
 {
-	"name": "@rautils/ngx-tab-focus",
+	"name": "rautils",
 	"version": "0.0.1",
 	"scripts": {
 		"ng": "ng",
@@ -13,6 +13,7 @@
 		"build:ci": "npm run clean && npm run test && npm run build:prod",
 		"build:demo": "ng build rautils-demo --prod --base-href='/rautils/'",
 		"test": "ng test",
+		"test:coverage": "ng test --coverage",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"postinstall": "ngcc"

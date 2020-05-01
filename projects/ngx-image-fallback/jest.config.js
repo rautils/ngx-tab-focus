@@ -4,7 +4,7 @@ module.exports = {
 	...preset,
 	preset: 'jest-preset-angular',
 	setupFilesAfterEnv: ['<rootDir>/node_modules/jest-preset-angular/build/setupJest.js'],
-	testMatch: ['**/*.spec.ts'],
+	testMatch: ['<rootDir>/projects/ngx-image-fallback/src/**/*.spec.ts'],
 	globals: {
 		...preset.globals,
 		'ts-jest': {

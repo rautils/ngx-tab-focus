@@ -14,7 +14,7 @@ on:
 # TODO: Add tests (needs: test)
 
 jobs:
-  publish-npm:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +24,20 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Install
         run: npm install
+      - name: Test
+        run: npm run test @rautils/ngx-image-fallback
+
+  publish-npm:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: npm ci
       - name: build
         run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
@@ -40,7 +54,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - name: Install
-        run: npm install
+        run: npm ci
       - name: build
         run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
