@@ -22,13 +22,13 @@ import { ImageAttributeAbstractComponent } from './image-attributes.abstract.com
 })
 export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent implements OnInit, OnChanges {
 	@Input()
-	private classWhileLoading = 'image-fallback-loading';
+	public classWhileLoading = 'image-fallback-loading';
 
 	@Input()
-	private classOnError = 'image-fallback-failed';
+	public classOnError = 'image-fallback-failed';
 
 	@Input()
-	private classOnSuccess = 'image-fallback-success';
+	public classOnSuccess = 'image-fallback-success';
 
 	@Output()
 	private imageLoad: EventEmitter<Event> = new EventEmitter<Event>();
@@ -97,4 +97,5 @@ export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent i
 			this.renderer.addClass(this.elementRef.nativeElement, this.classOnSuccess);
 		}
 	}
+
 }
