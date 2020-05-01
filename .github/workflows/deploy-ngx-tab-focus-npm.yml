@@ -53,7 +53,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - name: Install
-        run: npm ci
+        run: npm i
       - name: build
         run: npm run build:prod @rautils/ngx-tab-focus
       - name: Publish
