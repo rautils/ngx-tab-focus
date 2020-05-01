@@ -11,8 +11,6 @@ on:
       - "projects/ngx-image-fallback/src/**"
       - "!projects/*/src/**/*.spec.ts"
 
-# TODO: Add tests (needs: test)
-
 jobs:
   test:
     runs-on: ubuntu-latest

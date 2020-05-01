@@ -11,10 +11,22 @@ on:
       - "projects/ngx-tab-focus/src/**"
       - "!projects/*/src/**/*.spec.ts"
 
-# TODO: Add tests (needs: test)
-
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test @rautils/ngx-tab-focus
+
   publish-npm:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,6 +44,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

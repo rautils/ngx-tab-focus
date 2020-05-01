@@ -5,6 +5,7 @@ import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
 })
 export class NgxTabFocusDirective implements OnInit {
 	private contentCSS: string = `
+
 		.ngx-tab-focus__content {
 			position: relative;
 			display: block;
@@ -16,6 +17,7 @@ export class NgxTabFocusDirective implements OnInit {
 		.ngx-tab-focus__content:focus {
 			outline: none;
 		}
+
 		`;
 
 	private headStyleId = `ngx-tab-focus__style`;
