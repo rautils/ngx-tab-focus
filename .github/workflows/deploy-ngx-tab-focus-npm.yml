@@ -53,6 +53,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@rautils'
+          always-auth: true
         env:
           GITHUB_TOKEN: ${{secrets.PERSONAL_GITHUB_TOKEN}}
       - name: Install
