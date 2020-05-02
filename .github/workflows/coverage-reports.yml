@@ -1,0 +1,34 @@
+
+name: ngx-tab-focus package update
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "projects/*/src/**/*.spec.ts"
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: npm ci --ignore-scripts
+      - name: test ngx-fake-encapsulation
+        run: npm run test:coverage @rautils/ngx-fake-encapsulation
+      - name: test ngx-image-fallback
+        run: npm run test:coverage @rautils/ngx-image-fallback
+      - name: test ngx-tab-focus
+        run: npm run test:coverage @rautils/ngx-tab-focus
+      - name: codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: coverage/coverage-final.json
+          flags: unittests
+          name: rautils
