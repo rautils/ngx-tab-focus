@@ -60,7 +60,7 @@ jobs:
           ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
           GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: Install
-        run: npm ci --ignore-scripts
+        run: echo @rautils:registry=https://npm.pkg.github.com/ >> .npmrc && npm ci --ignore-scripts
         env:
           ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: build
