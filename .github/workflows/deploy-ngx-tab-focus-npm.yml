@@ -10,41 +10,42 @@ on:
     paths:
       - "projects/ngx-tab-focus/src/**"
       - "!projects/*/src/**/*.spec.ts"
+      - ".github/workflows/deploy-ngx-tab-focus-npm.yml"
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - name: Install
-        run: npm install
-      - name: Test
-        run: npm run test @rautils/ngx-tab-focus
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #         registry-url: https://registry.npmjs.org/
+  #     - name: Install
+  #       run: npm install
+  #     - name: Test
+  #       run: npm run test @rautils/ngx-tab-focus
 
-  publish-npm:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - name: Install
-        run: npm ci --ignore-scripts
-      - name: build
-        run: npm run build:prod @rautils/ngx-tab-focus
-      - name: Publish
-        run: cd dist/ngx-tab-focus && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  # publish-npm:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #         registry-url: https://registry.npmjs.org/
+  #     - name: Install
+  #       run: npm ci --ignore-scripts
+  #     - name: build
+  #       run: npm run build:prod @rautils/ngx-tab-focus
+  #     - name: Publish
+  #       run: cd dist/ngx-tab-focus && npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -55,7 +56,9 @@ jobs:
           scope: '@rautils'
           always-auth: true
         env:
-          GITHUB_TOKEN: ${{secrets.PERSONAL_GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: Install
         run: npm ci --ignore-scripts
         env:
