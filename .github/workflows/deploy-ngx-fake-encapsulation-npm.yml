@@ -1,0 +1,67 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: ngx-fake-encapsulation package update
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "projects/ngx-fake-encapsulation/src/**"
+      - "!projects/*/src/**/*.spec.ts"
+      - ".github/workflows/deploy-ngx-fake-encapsulation-npm.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test @rautils/ngx-fake-encapsulation
+
+  publish-npm:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: npm ci --ignore-scripts
+      - name: build
+        run: npm run build:prod @rautils/ngx-fake-encapsulation
+      - name: Publish
+        run: cd dist/ngx-fake-encapsulation && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-gpr:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@rautils'
+      - name: Install
+        run: npm i --prod --ignore-scripts && npm i @angular/cli
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
+      - name: build
+        run: npm run build:prod @rautils/ngx-fake-encapsulation
+      - name: Publish
+        run: cd dist/ngx-fake-encapsulation && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}

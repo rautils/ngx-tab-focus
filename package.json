@@ -17,7 +17,8 @@
 		"test:watch": "ng test --watch",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
-		"postinstall": "ngcc"
+		"postinstall": "ngcc",
+		"rautility": "ng g @rautils/schematics:rautility"
 	},
 	"private": true,
 	"dependencies": {

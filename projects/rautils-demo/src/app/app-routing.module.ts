@@ -16,6 +16,14 @@ const routes: Routes = [
 				(m) => m.NgxImageFallbackDemoModule
 			),
 	},
+	{
+		path: 'ngx-fake-encapsulation',
+		loadChildren: () =>
+			import('./modules/ngx-fake-encapsulation-demo/ngx-fake-encapsulation-demo.module').then(
+				(m) => m.NgxFakeEncapsulationDemoModule
+			),
+	},
+
 ];
 
 @NgModule({

@@ -19,4 +19,10 @@ Component that sets a style for focused elements only by keyboard (tab key).
 ## [ngx-image-fallback](https://github.com/rautils/rautils/tree/master/projects/ngx-image-fallback) ![ngx-image-fallback updated](https://github.com/rautils/rautils/workflows/NPM%20ngx-image-fallback/badge.svg)
 
 
-Image that renders the given content if it fails.
+Image that, if it fails, renders the given content in `ng-content`.
+
+
+## [ngx-fake-encapsulation](https://github.com/rautils/rautils/tree/master/projects/ngx-fake-encapsulation) ![ngx-fake-encapsulation updated](https://github.com/rautils/rautils/workflows/NPM%20ngx-fake-encapsulation/badge.svg)
+
+
+Directive that adds the encapsulation value of the last host element. By doing that, this element can now be targeted in the style of the parent host.

@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 	public libraries: {path: string, name: string}[] = [
 		{name: 'NgxTabFocus', path: 'ngx-tab-focus'},
 		{name: 'NgxImageFallback', path: 'ngx-image-fallback'},
+		{name: 'NgxFakeEncapsulation', path: 'ngx-fake-encapsulation'},
 	];
 
 	constructor(private route: ActivatedRoute, private router: Router) {}
