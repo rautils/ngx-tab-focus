@@ -1,5 +1,5 @@
 
-name: ngx-tab-focus package update
+name: coverage report
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - name: Install
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
       - name: test ngx-fake-encapsulation
         run: npm run test:coverage @rautils/ngx-fake-encapsulation
       - name: test ngx-image-fallback
