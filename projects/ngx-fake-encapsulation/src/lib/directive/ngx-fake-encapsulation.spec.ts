@@ -35,7 +35,6 @@ describe(`NgxFakeEncapsulationDirective`, () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(NgxFakeEncapsulationOutterTesterComponent);
 		fixture.detectChanges();
-
 		encapsulated = fixture.debugElement.query(By.css(`#encapsulated`)).nativeElement;
 	});
 
