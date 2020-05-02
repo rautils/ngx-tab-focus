@@ -1,6 +1,14 @@
-<h1 align="center">@rautils/ngx-focus-tab</h1>
+<h1 align="center">@rautils/ngx-fake-encapsulation</h1>
 
 <h3 align="center">Directive that gives the encapsulation of the last host to the component</h3>
+
+<h4 align="center">
+
+![npm version](https://badge.fury.io/js/%40rautils%2Fngx-fake-encapsulation.svg)
+
+![auto deploy](https://github.com/rautils/rautils/workflows/ngx-fake-encapsulation%20deploy/badge.svg)
+
+</h4>
 
 # This is a work in progress
 

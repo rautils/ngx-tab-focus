@@ -2,6 +2,14 @@
 
 <h3 align="center">Library to give a fallback element to an image</h3>
 
+<h4 align="center">
+
+![npm version](https://badge.fury.io/js/%40rautils%2Fngx-image-fallback.svg)
+
+![auto deploy](https://github.com/rautils/rautils/workflows/ngx-image-fallback%20deploy/badge.svg)
+
+</h4>
+
 # This is a work in progress
 
 # Demo

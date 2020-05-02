@@ -100,7 +100,7 @@ describe('NgxImageFallback logic', () => {
 	it(`doesn't hide image while loading if previous image was a success`, () => {
 		imgLoaded(img, fixture);
 
-		expect(img.classes['image-fallback-hide-img']).toBe(undefined);
+		expect(img.classes['image-fallback-hide-img']).toBeFalsy();
 	});
 
 	it(`hides fallback if image is loading`, () => {

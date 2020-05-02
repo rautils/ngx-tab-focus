@@ -2,6 +2,14 @@
 
 <h3 align="center">Library to style focused elements only by keyboard</h3>
 
+<h4 align="center">
+
+![npm version](https://badge.fury.io/js/%40rautils%2Fngx-tab-focus.svg)
+
+![auto deploy](https://github.com/rautils/rautils/workflows/ngx-tab-focus%20deploy/badge.svg)
+
+</h4>
+
 # This is a work in progress
 
 # Demo

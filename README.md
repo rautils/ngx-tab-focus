@@ -12,17 +12,17 @@
 
 # Libraries
 
-## [ngx-tab-focus](https://github.com/rautils/rautils/tree/master/projects/ngx-tab-focus) ![ngx-tab-focus updated](https://github.com/rautils/rautils/workflows/NPM%20ngx-tab-focus/badge.svg)
+## [ngx-tab-focus](https://github.com/rautils/rautils/tree/master/projects/ngx-tab-focus) ![npm version](https://badge.fury.io/js/%40rautils%2Fngx-tab-focus.svg)
 
 Component that sets a style for focused elements only by keyboard (tab key).
 
-## [ngx-image-fallback](https://github.com/rautils/rautils/tree/master/projects/ngx-image-fallback) ![ngx-image-fallback updated](https://github.com/rautils/rautils/workflows/NPM%20ngx-image-fallback/badge.svg)
+## [ngx-image-fallback](https://github.com/rautils/rautils/tree/master/projects/ngx-image-fallback) ![npm version](https://badge.fury.io/js/%40rautils%2Fngx-image-fallback.svg)
 
 
 Image that, if it fails, renders the given content in `ng-content`.
 
 
-## [ngx-fake-encapsulation](https://github.com/rautils/rautils/tree/master/projects/ngx-fake-encapsulation) ![ngx-fake-encapsulation updated](https://github.com/rautils/rautils/workflows/NPM%20ngx-fake-encapsulation/badge.svg)
+## [ngx-fake-encapsulation](https://github.com/rautils/rautils/tree/master/projects/ngx-fake-encapsulation) ![npm version](https://badge.fury.io/js/%40rautils%2Fngx-fake-encapsulation.svg)
 
 
 Directive that adds the encapsulation value of the last host element. By doing that, this element can now be targeted in the style of the parent host.
