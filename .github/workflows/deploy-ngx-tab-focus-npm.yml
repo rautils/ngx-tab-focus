@@ -35,7 +35,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - name: Install
-        run: npm ci --prod --ignore-scripts
+        run: npm ci --ignore-scripts
       - name: build
         run: npm run build:prod @rautils/ngx-tab-focus
       - name: Publish
@@ -51,9 +51,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+          auth-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
           registry-url: https://npm.pkg.github.com/
       - name: Install
-        run: npm ci --prod --ignore-scripts
+        run: npm ci --ignore-scripts
+        env:
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: build
         run: npm run build:prod @rautils/ngx-tab-focus
       - name: Publish
