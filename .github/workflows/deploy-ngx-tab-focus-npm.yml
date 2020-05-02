@@ -55,7 +55,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@rautils'
       - name: Install
-        run: npm ci --prod --ignore-scripts && npm i @angular/cli
+        run: npm i --prod --ignore-scripts && npm i @angular/cli
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: build
