@@ -54,6 +54,9 @@ jobs:
           auth-token: ${{ secrets.ACCESS_TOKEN }}
           access-token: ${{ secrets.ACCESS_TOKEN }}
           registry-url: https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
       - name: Install
         run: npm ci --ignore-scripts
         env:
