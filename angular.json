@@ -142,7 +142,9 @@
 							"projects/ngx-tab-focus/tsconfig.lib.json",
 							"projects/ngx-tab-focus/tsconfig.spec.json"
 						],
-						"exclude": ["**/node_modules/**"]
+						"exclude": [
+							"**/node_modules/**"
+						]
 					}
 				}
 			}
@@ -177,6 +179,44 @@
 						"tsConfig": [
 							"projects/ngx-image-fallback/tsconfig.lib.json",
 							"projects/ngx-image-fallback/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**"
+						]
+					}
+				}
+			}
+		},
+		"@rautils/ngx-fake-encapsulation": {
+			"projectType": "library",
+			"root": "projects/ngx-fake-encapsulation",
+			"sourceRoot": "projects/ngx-fake-encapsulation/src",
+			"prefix": "lib",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "projects/ngx-fake-encapsulation/tsconfig.lib.json",
+						"project": "projects/ngx-fake-encapsulation/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"tsConfig": "projects/ngx-fake-encapsulation/tsconfig.lib.prod.json"
+						}
+					}
+				},
+				"test": {
+					"builder": "@angular-builders/jest:run",
+					"options": {
+						"tsConfig": "projects/ngx-fake-encapsulation/tsconfig.spec.json"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/ngx-fake-encapsulation/tsconfig.lib.json",
+							"projects/ngx-fake-encapsulation/tsconfig.spec.json"
 						],
 						"exclude": [
 							"**/node_modules/**"
