@@ -25,7 +25,7 @@ export class NgxFakeEncapsulationDirective implements OnInit {
 				this.renderer.setAttribute(this.element.nativeElement, encapsulation, ``);
 			}
 		} catch (e) {
-			console.error(`no host element`);
+			// no host element;
 		}
 	}
 
