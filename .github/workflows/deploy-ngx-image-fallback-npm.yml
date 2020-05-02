@@ -35,7 +35,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - name: Install
-        run: npm ci
+        run: npm ci --prod --ignore-scripts
       - name: build
         run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
@@ -54,7 +54,7 @@ jobs:
           auth-token: ${{ secrets.ACCESS_TOKEN }}
           registry-url: https://npm.pkg.github.com/
       - name: Install
-        run: npm ci
+        run: npm ci --prod --ignore-scripts
       - name: build
         run: npm run build:prod @rautils/ngx-image-fallback
       - name: Publish
