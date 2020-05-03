@@ -4,9 +4,9 @@
 	<ul id="libraries-list">
 		<li *ngFor="let library of libraries">
 			<a
-				[routerLink]="['/', library.path]"
-				skipLocationChange
-				routerLinkActive="active"
+				[routerLink]="['/']"
+				[queryParams]="{library: library.path}"
+				[class.active]="isActive(library)"
 			>
 				{{ library.name }}
 			</a>

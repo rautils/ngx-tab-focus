@@ -13,15 +13,29 @@ export class AppComponent implements OnInit {
 		{ name: 'NgxFakeEncapsulation', path: 'ngx-fake-encapsulation' },
 	];
 
+	private activeLibrary: string = null;
+
 	constructor(private route: ActivatedRoute, private router: Router) {}
 
 	ngOnInit(): void {
 		this.route.queryParams.subscribe((params) => {
 			if (params.hasOwnProperty('library')) {
 				if (this.libraries.find((library) => library.path === params.library)) {
-					this.router.navigate(['/', params.library], { skipLocationChange: true });
+					this.navigate(params.library);
 				}
 			}
 		});
+	}
+
+	public async navigate(path: string) {
+		await this.router.navigate([`/${path}`], {
+			skipLocationChange: true,
+			queryParamsHandling: 'merge'
+		});
+		this.activeLibrary = path;
+	}
+
+	public isActive(library: { path: string; name: string }): boolean {
+		return this.activeLibrary === library.path;
 	}
 }
