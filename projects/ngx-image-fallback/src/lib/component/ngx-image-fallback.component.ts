@@ -22,6 +22,9 @@ import { ImageAttributeAbstractComponent } from './image-attributes.abstract.com
 })
 export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent implements OnInit, OnChanges {
 	@Input()
+	public imgClass = '';
+
+	@Input()
 	public classWhileLoading = 'image-fallback-loading';
 
 	@Input()
