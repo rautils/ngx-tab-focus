@@ -1,6 +1,7 @@
 <ng-container *ngIf="showImage; else fallback">
 
 	<img
+		class="ngx-image-fallback__img"
 		[class.image-fallback-hide-img]="hideLastImage"
 
 		[alt]="alt"
