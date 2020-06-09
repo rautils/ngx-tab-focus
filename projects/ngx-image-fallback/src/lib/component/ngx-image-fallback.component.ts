@@ -10,6 +10,7 @@ import {
 	Renderer2,
 	OnChanges,
 	SimpleChanges,
+	ChangeDetectorRef,
 } from '@angular/core';
 import { ImageAttributeAbstractComponent } from './image-attributes.abstract.component';
 
@@ -20,7 +21,8 @@ import { ImageAttributeAbstractComponent } from './image-attributes.abstract.com
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent implements OnInit, OnChanges {
+export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent
+	implements OnInit, OnChanges {
 	@Input()
 	public imgClass = '';
 
@@ -43,7 +45,11 @@ export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent i
 	private imageFailed = false;
 	private lastImageSuccess = false;
 
-	constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+	constructor(
+		private elementRef: ElementRef,
+		private renderer: Renderer2,
+		private changeDetector: ChangeDetectorRef
+	) {
 		super();
 	}
 
@@ -99,6 +105,7 @@ export class NgxImageFallbackComponent extends ImageAttributeAbstractComponent i
 		} else {
 			this.renderer.addClass(this.elementRef.nativeElement, this.classOnSuccess);
 		}
-	}
 
+		this.changeDetector.detectChanges();
+	}
 }
